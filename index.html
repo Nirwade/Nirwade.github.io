@@ -248,7 +248,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 <div class="hero">
   <div class="hero-eyebrow">478 stores · 85 suppliers · 1,265 SKUs · 3.27M predictions</div>
   <h1 class="display">Retail AI that<br>catches what<br><em>humans can't see.</em></h1>
-  <p class="hero-sub">HyperShelf DemandSense v2 is a full-stack retail intelligence pipeline — LightGBM probabilistic demand forecasting, Random Forest phantom inventory detection, and a locally-served LLM that explains real supply chain decisions without hallucinating a single number. Engineered by an AI & Machine Learning Engineer and MS student at the University at Buffalo.</p>
+  <p class="hero-sub">HyperShelf DemandSense v2 is a full-stack retail intelligence pipeline LightGBM probabilistic demand forecasting, Random Forest phantom inventory detection, and a locally-served LLM that explains real supply chain decisions without hallucinating a single number. Engineered by an AI & Machine Learning Engineer and MS student at the University at Buffalo.</p>
   <div class="kpi-strip">
     <div class="kpi"><div class="kpi-val red">$47.4M</div><div class="kpi-label">Revenue risk tracked</div></div>
     <div class="kpi"><div class="kpi-val teal">24.06%</div><div class="kpi-label">WAPE — vs ~32% baseline</div></div>
@@ -290,8 +290,8 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
     <div>
       <div class="story-text">
         <p><strong>It’s a Friday evening. A family walks into a store to buy their favorite brand of premium juice for the weekend. The shelf is completely empty. They leave and buy it at a competitor's store.</strong></p>
-        <p>The store manager investigates and finds the system says 0 stock. They place an emergency order immediately, but the upstream supplier has an 11-day lead time. The next weekend arrives—foot traffic is up 40% for Saturday shopping, but the product still hasn't arrived. The shelves remain empty. <strong>The cycle repeats.</strong></p>
-        <p>Meanwhile, across 478 stores, <em>$47.4M in revenue is silently disappearing</em>. Not from theft. Not from damage. From a forecasting model that treats every day the same — a 30-day moving average that has no concept of weekends, promotions, lead time variability, or demand uncertainty. When Black Friday hits and stores clear shelves in 4 hours, the model keeps predicting the same volumes it saw last month. <strong>For every 10 units sold, it predicted 17.</strong> Bias: -1.72.</p>
+        <p>The store manager investigates and finds the system says 0 stock. They place an emergency order immediately, but the upstream supplier has an 11-day lead time. The next weekend arrives foot traffic is up 40% for Saturday shopping, but the product still hasn't arrived. The shelves remain empty. <strong>The cycle repeats.</strong></p>
+        <p>Meanwhile, across 478 stores, <em>$47.4M in revenue is silently disappearing</em>. Not from theft. Not from damage. From a forecasting model that treats every day the same as a 30-day moving average that has no concept of weekends, promotions, lead time variability, or demand uncertainty. When Black Friday hits and stores clear shelves in 4 hours, the model keeps predicting the same volumes it saw last month. <strong>For every 10 units sold, it predicted 17.</strong> Bias: -1.72.</p>
         <p>The safety stock policy was Target = μ. Average demand, nothing more. No buffer for uncertainty. No tier-based service level. No model for what happens when a supplier delivers 3 days late into a peak week. The result: stockouts that were entirely predictable if you had the right model.</p>
       </div>
       <div class="callout"><strong>The core problem:</strong> Legacy systems produce numbers, not intelligence. They tell you what demand was. They don't tell you what it will be, how uncertain that prediction is, where ghost inventory is locking up capital, or what to do about any of it. HyperShelf DemandSense v2 was built to fix all four.</div>
@@ -313,7 +313,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
   <div class="stat-grid-4">
     <div class="stat-card sc-red"><div class="sc-num">32.7%</div><div class="sc-label">P90 demand coverage under the legacy model. Against a 90% target. The system was calibrated for a world where demand is perfectly predictable.</div></div>
     <div class="stat-card sc-amber"><div class="sc-num">97.8u</div><div class="sc-label">Average shortage per SKU during promotional events. The old model had no promo depth or demand lift features — it was blind to every sale you ran.</div></div>
-    <div class="stat-card sc-teal"><div class="sc-num">$85.6M</div><div class="sc-label">Revenue leakage identified at baseline. The system wasn't losing money through waste — it was losing through demand it didn't know existed.</div></div>
+    <div class="stat-card sc-teal"><div class="sc-num">$85.6M</div><div class="sc-label">Revenue leakage identified at baseline. The system wasn't losing money through waste it was losing through demand it didn't know existed.</div></div>
     <div class="stat-card sc-purple"><div class="sc-num">0</div><div class="sc-label">Safety stock units in the old policy. Reorder point = μ. No uncertainty buffer. No tier-based service level. No protection against supplier delay.</div></div>
   </div>
 </section>
@@ -321,7 +321,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 <section id="lightgbm" style="background:var(--bg2)">
   <div class="section-eyebrow">Demand Forecasting</div>
   <h2 class="display">LightGBM — why gradient<br>boosting <em>wins in retail.</em></h2>
-  <p class="section-sub">Retail demand is non-linear, non-stationary, and event-driven. A 30-day moving average assumes yesterday predicts tomorrow. LightGBM assumes nothing — it learns from the interaction between day-of-week, promotional depth, lag velocity, and store format simultaneously, capturing patterns that no linear model can represent.</p>
+  <p class="section-sub">Retail demand is non-linear, non-stationary, and event-driven. A 30-day moving average assumes yesterday predicts tomorrow. LightGBM assumes nothing it learns from the interaction between day-of-week, promotional depth, lag velocity, and store format simultaneously, capturing patterns that no linear model can represent.</p>
 
   <div class="story-img" style="height:auto; margin-bottom:48px; padding:0; border:none; background:transparent;">
     <img src="assets/architecture.png" alt="System Architecture Diagram" style="width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px;">
@@ -330,9 +330,9 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
   <div class="two-col">
     <div>
       <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">Why LightGBM <em>specifically</em></h3>
-      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">Gradient boosting builds an ensemble of trees sequentially — each tree corrects the residual errors of the previous one. For retail, this matters because demand drivers interact in complex, non-additive ways: a Saturday promotion in a Premium store during summer hits differently than the same promotion on a Tuesday in a Medium store in winter. Decision trees capture those interactions natively through splits. Linear models require you to specify them manually, and you'll miss most of them.</p>
-      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">LightGBM specifically — rather than XGBoost — was chosen for its leaf-wise tree growth on 4.58 GB of training data. Leaf-wise growth reduces error faster per tree than level-wise, which matters when training on 18.3 million time-series observations where every additional epoch is computationally expensive.</p>
-      <div class="callout teal"><strong>Probabilistic output:</strong> Instead of predicting a single demand number (P50), the model uses quantile regression to output P10 (low demand scenario), P50 (median expected), and P90 (high demand scenario). The P90 drives safety stock decisions — order at the upper bound to protect against demand spikes. This alone restored P90 coverage from 32.7% to 89.75%.</div>
+      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">Gradient boosting builds an ensemble of trees sequentially each tree corrects the residual errors of the previous one. For retail, this matters because demand drivers interact in complex, non-additive ways: a Saturday promotion in a Premium store during summer hits differently than the same promotion on a Tuesday in a Medium store in winter. Decision trees capture those interactions natively through splits. Linear models require you to specify them manually, and you'll miss most of them.</p>
+      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">LightGBM specifically rather than XGBoost was chosen for its leaf-wise tree growth on 4.58 GB of training data. Leaf-wise growth reduces error faster per tree than level-wise, which matters when training on 18.3 million time-series observations where every additional epoch is computationally expensive.</p>
+      <div class="callout teal"><strong>Probabilistic output:</strong> Instead of predicting a single demand number (P50), the model uses quantile regression to output P10 (low demand scenario), P50 (median expected), and P90 (high demand scenario). The P90 drives safety stock decisions order at the upper bound to protect against demand spikes. This alone restored P90 coverage from 32.7% to 89.75%.</div>
     </div>
     <div>
       <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">22 features — <em>what each does</em></h3>
@@ -340,7 +340,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
         <div class="feature"><span class="feature-key">Segment features</span><span class="feature-val">category, foot_traffic_tier, region, store_format, price_band — the model learns separate demand baselines per segment. Premium stores in the Southwest have fundamentally different demand curves than Low-tier stores in the Northeast.</span></div>
         <div class="feature"><span class="feature-key">Temporal features</span><span class="feature-val">dow, month, weekofyear, is_weekend — retail demand is weekly-seasonal. Saturday demand for beverages is 40% higher than Monday. Without weekday features, the model can't capture this and over-orders on Mondays, under-orders on weekends.</span></div>
         <div class="feature"><span class="feature-key">Lag features</span><span class="feature-val">lag_1, lag_7, lag_14, lag_28 — give the model memory. lag_7 says "what did this SKU sell exactly one week ago?" This captures the weekly demand cycle. roll_mean_7/28 smooth out noise. roll_std_7 captures demand volatility — high std → wider safety stock band needed.</span></div>
-        <div class="feature amber"><span class="feature-key">Promo features (V2.2)</span><span class="feature-val">discount_pct, demand_lift_factor, promo_depth_x_flag, promo_lift_x_flag — the legacy model had zero promo awareness. A 40%-off event causing 3× demand looked identical to a regular Tuesday. These 4 features reduced promotional shortages from 97.8 units average to near zero.</span></div>
+        <div class="feature amber"><span class="feature-key">Promo features (V2.2)</span><span class="feature-val">discount_pct, demand_lift_factor, promo_depth_x_flag, promo_lift_x_flag — the legacy model had zero promo awareness. A 40%-off event causing 3× demand looked identical to a regular Tuesday. These 4 features reduced promotional shortages from 97.8 units average to near zero</span></div>
         <div class="feature red"><span class="feature-key">Stockout proxy (V2.2)</span><span class="feature-val">lost_units_proxy, stockout_flag — when a shelf is empty, sales are zero even if demand is high. Without this, the model trains on censored observations and under-forecasts during restocking. The proxy estimates true demand during stockout periods.</span></div>
       </div>
     </div>
@@ -360,13 +360,13 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
   </div>
 
   <div style="margin-top:56px">
-    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The true demand problem — <em>the evolution of the WAPE metric</em></h3>
+    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The true demand problem —<em>the evolution of the WAPE metric</em></h3>
     <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px">The legacy moving average model had a massive error rate of around <strong>32%</strong>. We initially built a LightGBM model that brought the standard WAPE down to <strong>24.18%</strong>. However, we realized this was a false success. The standard WAPE calculation uses observed sales as the target. But when shelves are empty, sales are zero regardless of actual demand. This censors the training signal. When we corrected the target to <strong>True Demand (actual sales + lost units)</strong>, we found that the 24.18% model actually had an error of <strong>28.19%</strong>. We then retrained the pipeline completely on the True Demand target, successfully bringing this much harder metric down to a final <strong>24.06%</strong>.</p>
     <div class="compare-box">
-      <div class="compare-card old"><div class="compare-label">1. Legacy Moving Avg</div><p><strong>~32.00%</strong> — The old baseline. Completely blind to promotional volatility and lead time variation.</p></div>
-      <div class="compare-card old"><div class="compare-label">2. LightGBM V1 (Biased)</div><p><strong>24.18%</strong> — Our first model. Looked like a huge win, but it was trained on observed sales, masking stockouts.</p></div>
-      <div class="compare-card old"><div class="compare-label">3. The Reality Check</div><p><strong>28.19%</strong> — When we corrected the target to True Demand (sales + lost units), the error of V1 jumped to 28.19%.</p></div>
-      <div class="compare-card new"><div class="compare-label">4. Final LightGBM V2</div><p><strong>24.06%</strong> — Retrained on the corrected True Demand target, finally bringing the true error down to 24.06%.</p></div>
+      <div class="compare-card old"><div class="compare-label">1. Legacy Moving Avg</div><p><strong>~32.00%</strong>  The old baseline. Completely blind to promotional volatility and lead time variation.</p></div>
+      <div class="compare-card old"><div class="compare-label">2. LightGBM V1 (Biased)</div><p><strong>24.18%</strong>  Our first model. Looked like a huge win, but it was trained on observed sales, masking stockouts.</p></div>
+      <div class="compare-card old"><div class="compare-label">3. The Reality Check</div><p><strong>28.19%</strong>  When we corrected the target to True Demand (sales + lost units), the error of V1 jumped to 28.19%.</p></div>
+      <div class="compare-card new"><div class="compare-label">4. Final LightGBM V2</div><p><strong>24.06%</strong>  Retrained on the corrected True Demand target, finally bringing the true error down to 24.06%.</p></div>
     </div>
   </div>
 
@@ -390,7 +390,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
 <section id="phantom">
   <div class="section-eyebrow">Phantom Inventory Detection</div>
-  <h2 class="display">Random Forest — hunting<br><em>ghosts in the data.</em></h2>
+  <h2 class="display">Random Forest hunting<br><em>ghosts in the data.</em></h2>
   <p class="section-sub">Phantom inventory is product the system believes exists but physically doesn't — miscounted, mislabelled, lost behind shelves. The system places no reorders because inventory shows available. The customer finds empty shelves. 14,041 such SKUs were flagged across 478 stores with High/Medium/Low confidence.</p>
 
   <div class="story-img" style="height:auto; margin-bottom:48px; padding:0; border:none; background:transparent;">
@@ -407,8 +407,8 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
       <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">4 engineering decisions <em>that made it work</em></h3>
       <div class="feature-list">
         <div class="feature"><span class="feature-key">Label source</span><span class="feature-val">Original labels came from the stockout table, which only captures complete stockouts — shelves fully empty. Ghost inventory is different: the system shows stock, but nothing sells. Labels were rebuilt from inventory-sales mismatch: stock present in system + zero observed sales velocity. This fundamentally changed what the model was learning.</span></div>
-        <div class="feature amber"><span class="feature-key">All 3 phantom rules</span><span class="feature-val">Three detection rules existed as separate logic checks. All three were included as explicit model features: consecutive zero-sales day count, inventory-to-forecast ratio, and velocity drop score. The RF learns which rules matter per product type — not all phantoms fail all three rules simultaneously.</span></div>
-        <div class="feature red"><span class="feature-key">F2 PR-curve threshold</span><span class="feature-val">The default threshold of 0.55 maximised precision (flagging fewer, more certain phantoms). But precision is the wrong objective here. F2 threshold from the Precision-Recall curve was optimised for recall × 2. This catches more real phantoms at the cost of more aisle checks — the right trade.</span></div>
+        <div class="feature amber"><span class="feature-key">All 3 phantom rules</span><span class="feature-val">Three detection rules existed as separate logic checks. All three were included as explicit model features: consecutive zero-sales day count, inventory-to-forecast ratio, and velocity drop score. The RF learns which rules matter per product type not all phantoms fail all three rules simultaneously.</span></div>
+        <div class="feature red"><span class="feature-key">F2 PR-curve threshold</span><span class="feature-val">The default threshold of 0.55 maximised precision (flagging fewer, more certain phantoms). But precision is the wrong objective here. F2 threshold from the Precision-Recall curve was optimised for recall × 2. This catches more real phantoms at the cost of more aisle checks the right trade.</span></div>
         <div class="feature purple"><span class="feature-key">Lag features</span><span class="feature-val">lag_1, lag_7, lag_14 added as features. A product with zero sales today may have sold well last week — it's not a phantom, just slow. A product with zero sales across all three lag windows, with inventory showing available, is almost certainly a ghost. Temporal context makes the difference.</span></div>
       </div>
     </div>
@@ -422,17 +422,17 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
   <div class="two-col" style="margin-top:0">
     <div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:16px">The old policy — <em>what was wrong</em></h3>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:16px">The old policy <em>what was wrong</em></h3>
       <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:16px">The legacy reorder policy was:</p>
       <div class="formula-box" style="margin-bottom:16px">
         <div class="formula-eyebrow">Old policy (static)</div>
         <div class="formula-main" style="color:var(--red)">Target = μ × Lead Time</div>
       </div>
-      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:16px">This assumes two things that are both wrong in retail: <strong style="color:var(--white)">(1) demand is perfectly predictable</strong> — that σD = 0, that tomorrow will look exactly like the 30-day average. And <strong style="color:var(--white)">(2) suppliers are perfectly reliable</strong> — that σLT = 0, that a supplier who promised 7 days will always deliver in exactly 7 days. The formula buffers for neither. When a supplier delivers 3 days late into a Black Friday week where demand is running 40% above forecast — which is exactly when it will happen — the policy has no protection. Stockout is mathematically guaranteed.</p>
+      <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:16px">This assumes two things that are both wrong in retail: <strong style="color:var(--white)">(1) demand is perfectly predictable</strong> — that σD = 0, that tomorrow will look exactly like the 30-day average. And <strong style="color:var(--white)">(2) suppliers are perfectly reliable</strong> — that σLT = 0, that a supplier who promised 7 days will always deliver in exactly 7 days. The formula buffers for neither. When a supplier delivers 3 days late into a Black Friday week where demand is running 40% above forecast — which is exactly when it will happen the policy has no protection. Stockout is mathematically guaranteed.</p>
       <p style="font-size:14px;color:var(--gray);line-height:1.8">The result: 0 safety stock units in the old policy. P90 coverage of 32.7%. $85.6M in leakage.</p>
     </div>
     <div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:16px">The new formula — <em>what it accounts for</em></h3>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:16px">The new formula <em>what it accounts for</em></h3>
       <div class="formula-box">
         <div class="formula-eyebrow">New policy (stochastic)</div>
         <div class="formula-main">SS = Z × √(LT × σD² + D² × σLT²) × SF</div>
@@ -442,7 +442,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
         <div class="formula-var"><span>LT</span> — average supplier lead time in days (from supplier scorecard)</div>
         <div class="formula-var"><span>σD</span> — daily demand standard deviation — from LightGBM's distribution output</div>
         <div class="formula-var"><span>D</span> — average daily demand μ — from LightGBM P50 forecast</div>
-        <div class="formula-var"><span>σLT</span> — lead time standard deviation — from supplier delivery history</div>
+        <div class="formula-var"><span>σLT</span> — lead time standard deviation from supplier delivery history</div>
         <div class="formula-var"><span>SF</span> — seasonal factor — from model's demand_lift_factor feature</div>
       </div>
       <p style="font-size:13px;color:var(--gray);line-height:1.8;margin-top:16px">The formula has two variance terms inside the square root. <strong style="color:var(--white)">LT × σD²</strong> captures demand uncertainty during the lead time period. <strong style="color:var(--white)">D² × σLT²</strong> captures lead time uncertainty — what happens when a supplier is late. Both terms matter. A highly reliable supplier serving volatile demand needs more safety stock than an unreliable supplier in a predictable category. The old formula captured neither. The new formula captures both, scaled by the tier's service level Z-score.</p>
@@ -457,7 +457,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 <section id="llm">
   <div class="section-eyebrow">LLM Architecture & Dashboard</div>
   <h2 class="display">AI embedded in<br><em>every single page.</em></h2>
-  <p class="section-sub">Rather than just a static reporting dashboard, HyperShelf v2.0 features ubiquitous Agentic AI. We built two distinct layers: a global Standalone AI Chat for network-wide questions, and localized AI Explainers embedded directly into all 10 dashboard pages (Forecast, Stockouts, What-If, etc.).</p>
+  <p class="section-sub">Rather than just a static reporting dashboard, HyperShelf v2.0 features ubiquitous Agentic AI We built two distinct layers: a global Standalone AI Chat for network-wide questions, and localized AI Explainers embedded directly into all 10 dashboard pages (Forecast, Stockouts, What-If, etc.).</p>
 
   <h3 style="font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px">Standalone Conversational AI Chat</h3>
   <div class="gif-zone-large" style="padding: 0; border: none; background: transparent; margin-bottom: 40px;">
@@ -496,10 +496,10 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
       </div>
       <div>
         <div class="feature-list">
-          <div class="feature"><span class="feature-key">What Python does</span><span class="feature-val">Reads CSVs, computes exact values, sorts, filters, identifies spike weeks, builds structured text summary. Never wrong on numbers — it reads them from the file.</span></div>
+          <div class="feature"><span class="feature-key">What Python does</span><span class="feature-val">Reads CSVs, computes exact values, sorts, filters, identifies spike weeks, builds structured text summary. Never wrong on numbers it reads them from the file.</span></div>
           <div class="feature amber"><span class="feature-key">What LLaMA does</span><span class="feature-val">Receives the structured text summary and explains the retail context. Adds domain reasoning: "why Black Friday breaks forecasting models" or "why ordering at P90 protects against demand uncertainty." Temperature 0.1 for facts, 0.2 for explanations.</span></div>
           <div class="feature red"><span class="feature-key">What LLaMA cannot do</span><span class="feature-val">See the raw 3.27M row prediction file. Compute anything. Invent numbers not in its prompt. The system prompt explicitly says: "Answer ONLY using the data above. Do not calculate or estimate."</span></div>
-          <div class="feature purple"><span class="feature-key">Why this works at scale</span><span class="feature-val">You can't pass 400MB of CSV to a 3B model. Python compresses the relevant answer into a 200-word summary. LLaMA explains those 200 words. The 3B parameter constraint becomes irrelevant because the model is never asked to retrieve — only to explain.</span></div>
+          <div class="feature purple"><span class="feature-key">Why this works at scale</span><span class="feature-val">You can't pass 400MB of CSV to a 3B model. Python compresses the relevant answer into a 200-word summary. LLaMA explains those 200 words. The 3B parameter constraint becomes irrelevant because the model is never asked to retrieve only to explain.</span></div>
         </div>
       </div>
     </div>
@@ -512,7 +512,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
         <div class="chal-num">Challenge 01 — Routing hallucination</div>
         <div class="chal-title">LLaMA answered forecast questions with replenishment tool output</div>
         <div class="chal-symptom">The model answered "Which category forecasts worst?" by inventing WAPE numbers using order quantities, with store IDs like S9999 that don't exist in any CSV</div>
-        <div class="chal-fix">Without strict routing, LLaMA reached for the nearest available tool — replenishment data — and built plausible-sounding answers from it. <strong>Fix:</strong> A 600-line answer() routing function with keyword + regex intent detection. The WAPE handler sits at line 241, before any replenishment handler can intercept. Forecast questions hit the forecasting path first, always. Routing is explicit, not emergent from the model's understanding.</div>
+        <div class="chal-fix">Without strict routing, LLaMA reached for the nearest available tool replenishment data and built plausible-sounding answers from it. <strong>Fix:</strong> A 600-line answer() routing function with keyword + regex intent detection. The WAPE handler sits at line 241, before any replenishment handler can intercept. Forecast questions hit the forecasting path first, always. Routing is explicit, not emergent from the model's understanding.</div>
       </div>
       <div class="chal-card">
         <div class="chal-num">Challenge 02 — Context injection at 3.27M rows</div>
@@ -524,13 +524,13 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
         <div class="chal-num">Challenge 03 — Intent ambiguity across question types</div>
         <div class="chal-title">Ambiguous questions hit the wrong handler, producing confident wrong answers</div>
         <div class="chal-symptom">"What should I order?" sometimes returned demand forecast data instead of replenishment quantities — partially correct data, answering a completely different question than asked</div>
-        <div class="chal-fix">Retail questions share vocabulary across domains — "order" appears in both forecast and replenishment contexts. <strong>Fix:</strong> Priority-ordered routing. The WAPE spike handler checks its keywords first. If it matches, the question never reaches any other handler. Each domain has a fixed keyword set and explicit precedence order — the most specific handlers are checked before general fallbacks.</div>
+        <div class="chal-fix">Retail questions share vocabulary across domains "order" appears in both forecast and replenishment contexts. <strong>Fix:</strong> Priority-ordered routing. The WAPE spike handler checks its keywords first. If it matches, the question never reaches any other handler. Each domain has a fixed keyword set and explicit precedence order the most specific handlers are checked before general fallbacks.</div>
       </div>
       <div class="chal-card">
         <div class="chal-num">Challenge 04 — Temperature calibration</div>
         <div class="chal-title">High temperature produced inventive, confident, completely wrong answers</div>
         <div class="chal-symptom">At temperature 0.7, LLaMA invented store IDs (S9999), revenue figures ($184,200 — never in any CSV), and a supplier fill rate of 87.3% for a supplier that doesn't exist in the scorecard</div>
-        <div class="chal-fix">LLaMA 3.2 3B at high temperature treats domain jargon as creative latitude. <strong>Fix:</strong> Temperature 0.1 for all answers that cite specific numbers — WAPE values, stockout counts, supplier names, revenue figures. Temperature 0.2 for explanatory text where phrase variation is acceptable and harmless. The model adds retail expertise around Python-computed facts. It never computes the facts itself.</div>
+        <div class="chal-fix">LLaMA 3.2 3B at high temperature treats domain jargon as creative latitude. <strong>Fix:</strong> Temperature 0.1 for all answers that cite specific numbers WAPE values, stockout counts, supplier names, revenue figures. Temperature 0.2 for explanatory text where phrase variation is acceptable and harmless. The model adds retail expertise around Python-computed facts. It never computes the facts itself.</div>
       </div>
     </div>
   </div>
@@ -544,7 +544,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 <section id="dashboard">
   <div class="section-eyebrow">Dashboard — 10 pages with AI</div>
   <h2 class="display">Every page has<br>its own <em>AI module.</em></h2>
-  <p class="section-sub">Each dashboard page runs its own Python AI module — 10 separate files, each with intent routing, data fetching, and Plotly chart generation inline in the chat response. Quick reply buttons pre-wire the most useful questions. No page says "I don't know" — every answer starts from real data.</p>
+  <p class="section-sub">Each dashboard page runs its own Python AI module 10 separate files, each with intent routing, data fetching, and Plotly chart generation inline in the chat response. Quick reply buttons pre-wire the most useful questions. No page says "I don't know" every answer starts from real data.</p>
   <div class="pages-grid">
     
     <div class="pg" data-num="01">
@@ -642,7 +642,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
 <section style="background:var(--bg2)">
   <div class="section-eyebrow">MLOps governance</div>
-  <h2 class="display">Component-specific gates —<br><em>not just LightGBM.</em></h2>
+  <h2 class="display">Component-specific gates<br><em>not just LightGBM.</em></h2>
   <p class="section-sub">Production-grade AI systems gate every component, not just the headline model. Each part of the pipeline has its own evaluation criteria because each part fails in different ways: the forecasting model drifts, the phantom classifier silently drops recall, and the LLM starts routing to the wrong handler.</p>
 
   <div class="gate-grid">
@@ -818,7 +818,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 <footer>
   <div>
     <div class="ft-brand">Hyper<em>Shelf</em></div>
-    <div class="ft-desc">DemandSense v2.0 — Retail AI Intelligence Platform. LightGBM + Random Forest + LLaMA 3.2. 478 stores. 85 suppliers. 3.27M predictions. Engineered by an AI & Machine Learning Engineer and MS student at the University at Buffalo.</div>
+    <div class="ft-desc">DemandSense v2.0 Retail AI Intelligence Platform. LightGBM + Random Forest + LLaMA 3.2. 478 stores. 85 suppliers. 3.27M predictions. Engineered by an AI & Machine Learning Engineer and MS student at the University at Buffalo</div>
   </div>
   <div>
     <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--gray);margin-bottom:14px;letter-spacing:0.1em;text-transform:uppercase">Models</div>
