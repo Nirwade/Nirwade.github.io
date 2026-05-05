@@ -320,7 +320,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
 <section id="lightgbm" style="background:var(--bg2)">
   <div class="section-eyebrow">Demand Forecasting</div>
-  <h2 class="display">LightGBM — why gradient<br>boosting <em>wins in retail.</em></h2>
+  <h2 class="display">LightGBM why gradient<br>boosting <em>wins in retail.</em></h2>
   <p class="section-sub">Retail demand is non-linear, non-stationary, and event-driven. A 30-day moving average assumes yesterday predicts tomorrow. LightGBM assumes nothing it learns from the interaction between day-of-week, promotional depth, lag velocity, and store format simultaneously, capturing patterns that no linear model can represent.</p>
 
   <div class="story-img" style="height:auto; margin-bottom:48px; padding:0; border:none; background:transparent;">
@@ -335,7 +335,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
       <div class="callout teal"><strong>Probabilistic output:</strong> Instead of predicting a single demand number (P50), the model uses quantile regression to output P10 (low demand scenario), P50 (median expected), and P90 (high demand scenario). The P90 drives safety stock decisions order at the upper bound to protect against demand spikes. This alone restored P90 coverage from 32.7% to 89.75%.</div>
     </div>
     <div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">22 features — <em>what each does</em></h3>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">22 features <em>what each does</em></h3>
       <div class="feature-list">
         <div class="feature"><span class="feature-key">Segment features</span><span class="feature-val">category, foot_traffic_tier, region, store_format, price_band — the model learns separate demand baselines per segment. Premium stores in the Southwest have fundamentally different demand curves than Low-tier stores in the Northeast.</span></div>
         <div class="feature"><span class="feature-key">Temporal features</span><span class="feature-val">dow, month, weekofyear, is_weekend — retail demand is weekly-seasonal. Saturday demand for beverages is 40% higher than Monday. Without weekday features, the model can't capture this and over-orders on Mondays, under-orders on weekends.</span></div>
@@ -360,7 +360,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
   </div>
 
   <div style="margin-top:56px">
-    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The true demand problem —<em>the evolution of the WAPE metric</em></h3>
+    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The true demand problem <em>the evolution of the WAPE metric</em></h3>
     <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px">The legacy moving average model had a massive error rate of around <strong>32%</strong>. We initially built a LightGBM model that brought the standard WAPE down to <strong>24.18%</strong>. However, we realized this was a false success. The standard WAPE calculation uses observed sales as the target. But when shelves are empty, sales are zero regardless of actual demand. This censors the training signal. When we corrected the target to <strong>True Demand (actual sales + lost units)</strong>, we found that the 24.18% model actually had an error of <strong>28.19%</strong>. We then retrained the pipeline completely on the True Demand target, successfully bringing this much harder metric down to a final <strong>24.06%</strong>.</p>
     <div class="compare-box">
       <div class="compare-card old"><div class="compare-label">1. Legacy Moving Avg</div><p><strong>~32.00%</strong>  The old baseline. Completely blind to promotional volatility and lead time variation.</p></div>
@@ -382,7 +382,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
   </div>
 
   <div style="margin-top:48px">
-    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The NULL promotion bug — <em>why only 1,434 rows had promo data</em></h3>
+    <h3 style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:14px">The NULL promotion bug <em>why only 1,434 rows had promo data</em></h3>
     <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">promotions.csv stored all-store promotions with store_id = NULL. A direct join on store_id dropped every all-store promo from the training data — leaving only 1,434 non-zero discount_pct rows out of 24 million. The model trained as if almost nothing was ever on promotion. Fix: detect NULL store_id rows, expand them to every store in the network before joining, then re-merge with store-specific promos. The promo feature went from near-useless to one of the top-5 by feature importance.</p>
     <div class="hl-box">Before fix: 1,434 rows with non-zero discount_pct out of 24M rows (0.006%)<br>After fix: millions of rows with accurate promo depth — top-5 feature by importance<br>Impact: promotional shortage reduced from 97.8 units average to model-aware replenishment</div>
   </div>
@@ -417,7 +417,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
 <section style="background:var(--bg2)">
   <div class="section-eyebrow">Supply chain integration</div>
-  <h2 class="display">Why the old formula<br>was wrong — and <em>what replaced it.</em></h2>
+  <h2 class="display">Why the old formula<br>was wrong and <em>what replaced it.</em></h2>
   <p class="section-sub">Probabilistic forecasts are only valuable if they drive decisions. LightGBM's μ and σ outputs feed directly into a stochastic replenishment policy that replaced the naive old system. The change is not cosmetic — it fundamentally alters how inventory buffers are calculated.</p>
 
   <div class="two-col" style="margin-top:0">
@@ -543,7 +543,7 @@ footer{background:var(--bg2);padding:60px 48px;border-top:1px solid var(--border
 
 <section id="dashboard">
   <div class="section-eyebrow">Dashboard — 10 pages with AI</div>
-  <h2 class="display">Every page has<br>its own <em>AI module.</em></h2>
+  <h2 class="display">Every page has<br>its own <em>AI module</em></h2>
   <p class="section-sub">Each dashboard page runs its own Python AI module 10 separate files, each with intent routing, data fetching, and Plotly chart generation inline in the chat response. Quick reply buttons pre-wire the most useful questions. No page says "I don't know" every answer starts from real data.</p>
   <div class="pages-grid">
     
